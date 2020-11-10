@@ -1,4 +1,4 @@
-package com.kodilla.microservices.accounts;
+package com.kodilla.accounts;
 
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;

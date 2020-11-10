@@ -1,4 +1,4 @@
-package com.kodilla.microservices.accounts;
+package com.kodilla.accounts;
 
 import org.springframework.stereotype.Component;
 

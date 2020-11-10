@@ -1,4 +1,4 @@
-package com.kodilla.microservices.accounts;
+package com.kodilla.accounts;
 
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
