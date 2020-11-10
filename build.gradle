@@ -5,7 +5,7 @@ plugins {
 	id 'application'
 }
 
-mainClassName = 'com.kodilla.microservices.accounts.AccountsApplication'
+mainClassName = 'com.kodilla.accounts.AccountsApplication'
 
 group = 'com.kodilla.microservices'
 version = '0.0.1-SNAPSHOT'
