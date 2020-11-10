@@ -8,6 +8,10 @@ spring:
     username: ${accounts.datasource.username}
     password: ${accounts.datasource.password}
     driver-class-name: org.postgresql.Driver
+  jpa:
+    database: ${accounts.datasource.database}
+    hibernate:
+      ddl-mode: ${accounts.datasource.ddl-mode}
 
 management:
   endpoints:
