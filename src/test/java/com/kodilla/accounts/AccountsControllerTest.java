@@ -33,7 +33,7 @@ class AccountsControllerTest {
 		ArrayList<AccountDTO> accounts = new ArrayList<>();
 		accounts.add(
 				new AccountDTO(
-						1421,
+						1421L,
 						"72249000059957936727967706",
 						"PLN",
 						BigDecimal.valueOf(6525.11)

@@ -17,8 +17,8 @@ class AccountsMapperTest {
 	public void shouldMapToAccountDTO() {
 		// given
 		Account account = new Account(
-				1234,
-				1,
+				1234L,
+				1L,
 				"1234567890",
 				"PLN",
 				BigDecimal.valueOf(4354.23)

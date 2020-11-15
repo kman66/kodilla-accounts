@@ -29,14 +29,14 @@ class AccountsServiceTest {
 		// given
 		Long customerId = 1421L;
 		Account account = new Account(
-				1234,
+				1234L,
 				customerId,
 				"1234567890",
 				"PLN",
 				BigDecimal.valueOf(4354.23)
 		);
 		AccountDTO accountDTO = new AccountDTO(
-				1234,
+				1234L,
 				"1234567890",
 				"PLN",
 				BigDecimal.valueOf(4354.23)
@@ -49,7 +49,7 @@ class AccountsServiceTest {
 		// then
 		assertFalse(fetchedAccounts.isEmpty());
 		assertEquals(1, fetchedAccounts.size());
-		assertEquals(1234, fetchedAccounts.get(0).getId(), 0);
+		assertEquals(1234L, fetchedAccounts.get(0).getId(), 0);
 		assertEquals("1234567890", fetchedAccounts.get(0).getNrb());
 		assertEquals("PLN", fetchedAccounts.get(0).getCurrency());
 		assertEquals(BigDecimal.valueOf(4354.23), fetchedAccounts.get(0).getAvailableFunds());

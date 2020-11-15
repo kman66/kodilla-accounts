@@ -15,10 +15,10 @@ public class Account {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 
 	@Column(name = "customer_id", nullable = false)
-	private long customerId;
+	private Long customerId;
 
 	@Column(name = "nrb")
 	private String nrb;
