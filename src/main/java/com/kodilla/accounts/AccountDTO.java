@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Getter
 @AllArgsConstructor
 public class AccountDTO {
-	private long id;
+	private Long id;
 	private String nrb;
 	private String currency;
 	private BigDecimal availableFunds;
