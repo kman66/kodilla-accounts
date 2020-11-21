@@ -20,12 +20,12 @@ plugins {
 
 mainClassName = 'com.kodilla.accounts.AccountsApplication'
 
+apply plugin: 'spring-cloud-contract'
+apply plugin: 'maven-publish'
+
 group = 'com.kodilla.microservices'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
-
-apply plugin: 'spring-cloud-contract'
-apply plugin: 'maven-publish'
 
 repositories {
 	mavenCentral()
@@ -85,7 +85,6 @@ task stubsJar(type: Jar) {
 	}
 }
 
-//task.outputs.cacheIf { true }
 task {
 	outputs {
 		cacheIf(true)

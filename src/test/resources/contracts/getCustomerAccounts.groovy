@@ -3,7 +3,7 @@ import org.springframework.cloud.contract.spec.Contract
 Contract.make {
     request {
         method 'GET'
-        url value('/v1/accounts?customerId=1')
+        url value('/v1/accounts?customerId=1234')
     }
     response {
         status 200
