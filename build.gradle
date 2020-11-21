@@ -7,7 +7,7 @@ buildscript {
 	}
 
 	dependencies {
-		classpath 'org.springframework.cloud:spring-cloud-contract-gradle-plugin:2.2.5.RELEASE'
+		classpath 'org.springframework.cloud:spring-cloud-contract-gradle-plugin:2.2.3.RELEASE'
 	}
 }
 
