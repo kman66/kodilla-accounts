@@ -23,6 +23,13 @@ public class AccountsController {
 	@Autowired
 	private AccountsService accountsService;
 
+	@GetMapping(value = "/")
+	public GetAccountsResponse getAllAccounts() {
+		log.info("Get all existing accounts");
+		List<AccountDTO> accounts = accountsService.getAllAccounts();
+		return GetAccountsResponse.of(accounts);
+	}
+
 	@GetMapping
 	public GetAccountsResponse getAccounts(@RequestParam("customerId") Long customerId) {
 		log.info("Get accounts for customerId: {}", customerId);

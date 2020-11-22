@@ -13,6 +13,13 @@ public class AccountsService {
 	@Autowired
 	private AccountsMapper accountsMapper;
 
+	public List<AccountDTO> getAllAccounts() {
+		return accountsRepository.findAll()
+				.stream()
+				.map(account -> accountsMapper.mapToAccountDTO(account))
+				.collect(Collectors.toList());
+	}
+
 	public List<AccountDTO> getAccountsForCustomer(Long customerId) {
 		return accountsRepository.findByCustomerId(customerId)
 				.stream()
