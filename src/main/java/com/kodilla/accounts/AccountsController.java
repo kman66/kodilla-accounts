@@ -31,7 +31,7 @@ public class AccountsController {
 	}
 
 	@GetMapping
-	public GetAccountsResponse getAccounts(@RequestParam("customerId") Long customerId) {
+	public GetAccountsResponse getAccountsFor(@RequestParam("customerId") Long customerId) {
 		log.info("Get accounts for customerId: {}", customerId);
 		if (!allowGetAccounts) {
 			log.info("Getting accounts is disabled");
@@ -39,5 +39,11 @@ public class AccountsController {
 		}
 		List<AccountDTO> accounts = accountsService.getAccountsForCustomer(customerId);
 		return GetAccountsResponse.of(accounts);
+	}
+
+	@PutMapping
+	public AccountDTO updateAccount(@RequestBody AccountDTO accountDTO) {
+		log.info("Update account: {}", accountDTO.getId());
+		return accountsService.saveAccount(accountDTO);
 	}
 }

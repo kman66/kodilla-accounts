@@ -26,4 +26,8 @@ public class AccountsService {
 				.map(account -> accountsMapper.mapToAccountDTO(account))
 				.collect(Collectors.toList());
 	}
+
+	public AccountDTO saveAccount(AccountDTO accountDTO) {
+		return accountsMapper.mapToAccountDTO(accountsRepository.save(accountsMapper.mapToAccount(accountDTO)));
+	}
 }

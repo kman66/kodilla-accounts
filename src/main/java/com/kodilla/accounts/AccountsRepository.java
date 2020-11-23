@@ -10,4 +10,7 @@ public interface AccountsRepository extends CrudRepository<Account, Long> {
 	List<Account> findAll();
 
 	List<Account> findByCustomerId(Long customerId);
+
+	@Override
+	Account save(Account account);
 }

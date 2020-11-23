@@ -38,7 +38,7 @@ class AccountsControllerTest {
 						"PLN",
 						BigDecimal.valueOf(6525.11)
 				));
-		Mockito.when(accountsController.getAccounts(123456L)).thenReturn(GetAccountsResponse.of(accounts));
+		Mockito.when(accountsController.getAccountsFor(123456L)).thenReturn(GetAccountsResponse.of(accounts));
 		// when & then
 		mockMvc.perform(get("/v1/accounts?customerId=123456")
 				.contentType(MediaType.APPLICATION_JSON))
