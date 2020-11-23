@@ -11,6 +11,8 @@ public interface AccountsRepository extends CrudRepository<Account, Long> {
 
 	List<Account> findByCustomerId(Long customerId);
 
+	Account findByNrb(String nrb);
+
 	@Override
 	Account save(Account account);
 }

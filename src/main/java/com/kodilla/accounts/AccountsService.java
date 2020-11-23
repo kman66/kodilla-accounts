@@ -27,6 +27,10 @@ public class AccountsService {
 				.collect(Collectors.toList());
 	}
 
+	public AccountDTO getAccountForNrb(String nrb) {
+		return accountsMapper.mapToAccountDTO(accountsRepository.findByNrb(nrb));
+	}
+
 	public AccountDTO saveAccount(AccountDTO accountDTO) {
 		return accountsMapper.mapToAccountDTO(accountsRepository.save(accountsMapper.mapToAccount(accountDTO)));
 	}

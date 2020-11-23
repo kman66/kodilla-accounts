@@ -37,6 +37,7 @@ class AccountsServiceTest {
 		);
 		AccountDTO accountDTO = new AccountDTO(
 				1234L,
+				customerId,
 				"1234567890",
 				"PLN",
 				BigDecimal.valueOf(4354.23)

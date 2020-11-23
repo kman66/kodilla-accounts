@@ -19,6 +19,7 @@ configurations {
 
 repositories {
 	mavenCentral()
+	mavenLocal()
 }
 
 ext {
@@ -33,6 +34,8 @@ dependencies {
 	implementation 'junit:junit:4.12'
 	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
 	implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+	implementation 'com.kodilla:kodilla-commons:0.0.1'
+	implementation 'org.springframework.kafka:spring-kafka'
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.3.5.RELEASE'
 	compile group: 'org.postgresql', name: 'postgresql', version: '42.2.18'
 	compileOnly 'org.projectlombok:lombok'
@@ -40,6 +43,7 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+	testImplementation 'org.springframework.kafka:spring-kafka-test'
 }
 
 dependencyManagement {
